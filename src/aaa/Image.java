@@ -15,7 +15,7 @@ public class Image implements Element,Picture{
         }
     }
 
-
+//Lab3
     @Override
     public void print() {
         System.out.println(imageName);
