@@ -1,5 +1,5 @@
 package aaa;
-//Lab3
+
 public class Paragraph implements Element{
 
     String text;

@@ -1,5 +1,5 @@
 package aaa;
-//Lab3
+
 import java.awt.*;
 
 public class ImageProxy implements Element,Picture{

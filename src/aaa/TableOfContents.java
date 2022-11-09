@@ -1,5 +1,5 @@
 package aaa;
-//Lab3
+
 public class TableOfContents implements Element {
 
     String ceva;
