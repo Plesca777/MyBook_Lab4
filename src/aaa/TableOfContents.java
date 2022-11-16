@@ -1,13 +1,23 @@
 package aaa;
 
+import java.util.ArrayList;
+
 public class TableOfContents implements Element {
 
-    String ceva;
+    ArrayList<String> contents;
+
+    public TableOfContents() {
+        this.contents = new ArrayList<String>();
+    }
+
+    public void addEntry(String entry){
+        contents.add(entry);
+    }
 
 
     @Override
     public void print() {
-
+        contents.forEach(System.out::println);
     }
 
     @Override
@@ -24,4 +34,11 @@ public class TableOfContents implements Element {
     public Element get(int nr) {
         return null;
     }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visitTableOfContents(this);
+    }
 }
+
+

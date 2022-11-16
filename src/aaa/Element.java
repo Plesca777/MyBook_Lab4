@@ -10,4 +10,7 @@ public interface Element {
     public void remove(Element element);
 
     public Element get(int nr);
+
+    public void accept(Visitor visitor);
+
 }

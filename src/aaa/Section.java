@@ -33,4 +33,12 @@ public class Section implements Element{
         this.elements.get(nr);
         return null;
     }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visitSection(this);
+        for(Element element: elements){
+            element.accept(visitor);
+        }
+    }
 }

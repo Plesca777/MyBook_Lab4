@@ -28,4 +28,9 @@ public class Table implements Element {
     public Element get(int nr) {
         return null;
     }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visitTable(this);
+    }
 }

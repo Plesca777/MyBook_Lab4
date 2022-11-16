@@ -9,10 +9,17 @@ public class Book extends Section{
 
     ArrayList<Author> authors;
 
+
+
+
     public Book(String title) {
        super(title);
        this.authors=new ArrayList<Author>();
 
+    }
+
+    public void addContent(Element elemente){
+        elements.add(elemente);
     }
 
     public void print(){
