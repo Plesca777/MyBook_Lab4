@@ -2,8 +2,13 @@ package aaa;
 
 public class Main {
 
+        public static void Printing(){
+                DocumentManager.getInstance().getBook().print();
+        }
+
         public static void main(String[] args) {
                 Book noapteBuna = new Book("Noapte buna, copii!");
+                DocumentManager.getInstance().setBook(noapteBuna);
                 Author rpGheo = new Author("Radu Pavel Gheo");
                 noapteBuna.addAuthor(rpGheo);
                 Section cap1 = new Section("Capitolul 1");
@@ -24,7 +29,7 @@ public class Main {
                 TableOfContents tableOfContents = new TableOfContents();
                 ContentVisitor visitor = new ContentVisitor(tableOfContents);
                 cap1.accept(visitor);
-                tableOfContents.print();
+                Printing();
 
         }
 }
